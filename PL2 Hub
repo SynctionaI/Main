@@ -1,0 +1,299 @@
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
+
+local Window = Rayfield:CreateWindow({
+	Name = "PL2 Basic Tools V1",
+	LoadingTitle = "Made with Love, for Rami",
+	LoadingSubtitle = "More to come",
+	ConfigurationSaving = {
+		Enabled = false,
+		FolderName = "nil",
+		FileName = "nil"
+	},
+})
+Rayfield:Notify({
+    Title = "Made to give an easier experience",
+    Content = "You're safe here, hacker 😇🕺",
+    Duration = 6.5,
+    Image = 4483362458,
+    Actions = { -- Notification Buttons
+        Ignore = {
+            Name = "Shut up.",
+            Callback = function()
+                print("The user tapped Okay!")
+            end
+		},
+	},
+})
+
+local Tab = Window:CreateTab("Main") 
+local Section = Tab:CreateSection("Basic Must-Use")
+
+local Button = Tab:CreateButton({
+	Name = "Auto Collect Orbs",
+	Callback = function()
+		while wait(0.5) do
+   for _,v in pairs(game:GetService("Workspace")["_THINGS_"].Orbs:GetDescendants()) do
+       if v.ClassName == "Part" then
+           v.Position = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+       end
+   end
+end
+
+	end,
+})
+local Button = Tab:CreateButton({
+	Name = "Auto Redeem Rank/VIP/Wheel",
+	Callback = function()
+		while wait(2) do
+game:GetService("ReplicatedStorage").Game.Events.ReddemVIPReward:InvokeServer()
+game:GetService("ReplicatedStorage").Game.Events.ReddemRankReward:InvokeServer()
+game:GetService("ReplicatedStorage").Game.Events.SpinWheel:InvokeServer()
+end
+	end,
+})
+
+
+local Tab = Window:CreateTab("GUI Utility") 
+local Section = Tab:CreateSection("Open GUI Tabs")
+
+local Button = Tab:CreateButton({
+	Name = "Rami Center Server Select",
+	Callback = function()
+local ohString1 = "RamiCenter"
+
+game:GetService("Players").LocalPlayer.PlayerScripts.UiTrigger:Fire(ohString1)
+	end,
+})
+local Button = Tab:CreateButton({
+	Name = "Index UI",
+	Callback = function()
+		local ohString1 = "Index"
+
+game:GetService("Players").LocalPlayer.PlayerScripts.UiTrigger:Fire(ohString1)
+	end,
+})
+local Button = Tab:CreateButton({
+	Name = "Upgrade UI",
+	Callback = function()
+		local ohString1 = "Upgrade"
+
+game:GetService("Players").LocalPlayer.PlayerScripts.UiTrigger:Fire(ohString1)
+	end,
+})
+local Button = Tab:CreateButton({
+	Name = "Converter UI",
+	Callback = function()
+		local ohString1 = "Converter"
+
+game:GetService("Players").LocalPlayer.PlayerScripts.UiTrigger:Fire(ohString1)
+	end,
+})
+
+local Section = Tab:CreateSection("Toggle Shiny and Rainbow UI here for easier converting")
+local Button = Tab:CreateButton({
+	Name = "Auto Shiny Gui (TURN ON)",
+	Callback = function()
+		_G.Active = true
+while _G.Active do
+    wait(0.3)
+local ohString1 = "Shiny"
+
+game:GetService("Players").LocalPlayer.PlayerScripts.UiTrigger:Fire(ohString1)
+end
+	end,
+})
+local Button = Tab:CreateButton({
+	Name = "Auto Shiny Gui (TURN OFF)",
+	Callback = function()
+		_G.Active = false
+while _G.Active do
+    wait(0.3)
+local ohString1 = "Shiny"
+
+game:GetService("Players").LocalPlayer.PlayerScripts.UiTrigger:Fire(ohString1)
+end
+	end,
+})
+local Button = Tab:CreateButton({
+	Name = "Auto Rainbow Gui (TURN ON)",
+	Callback = function()
+		_G.Active = true
+while _G.Active do
+    wait(0.3)
+local ohString1 = "Rainbow"
+
+game:GetService("Players").LocalPlayer.PlayerScripts.UiTrigger:Fire(ohString1)
+end
+	end,
+})
+local Button = Tab:CreateButton({
+	Name = "Auto Rainbow Gui (TURN OFF)",
+	Callback = function()
+		_G.Active = false
+while _G.Active do
+    wait(0.3)
+local ohString1 = "Rainbow"
+
+game:GetService("Players").LocalPlayer.PlayerScripts.UiTrigger:Fire(ohString1)
+end
+	end,
+})
+
+local Tab = Window:CreateTab("Extras") 
+local Button = Tab:CreateButton({
+	Name = "FPS Booster",
+	Callback = function()
+	-- Made by RIP#6666
+_G.Settings = {
+    Players = {
+        ["Ignore Me"] = true, -- Ignore your Character
+        ["Ignore Others"] = true -- Ignore other Characters
+    },
+    Meshes = {
+        Destroy = false, -- Destroy Meshes
+        LowDetail = true -- Low detail meshes (NOT SURE IT DOES ANYTHING)
+    },
+    Images = {
+        Invisible = true, -- Invisible Images
+        LowDetail = false, -- Low detail images (NOT SURE IT DOES ANYTHING)
+        Destroy = false, -- Destroy Images
+    },
+    Other = {
+        ["No Particles"] = true, -- Disables all ParticleEmitter, Trail, Smoke, Fire and Sparkles
+        ["No Camera Effects"] = true, -- Disables all PostEffect's (Camera/Lighting Effects)
+        ["No Explosions"] = true, -- Makes Explosion's invisible
+        ["No Clothes"] = true, -- Removes Clothing from the game
+        ["Low Water Graphics"] = true, -- Removes Water Quality
+        ["No Shadows"] = true, -- Remove Shadows
+        ["Low Rendering"] = true, -- Lower Rendering
+        ["Low Quality Parts"] = true -- Lower quality parts
+    }
+}
+loadstring(game:HttpGet("https://raw.githubusercontent.com/CasperFlyModz/discord.gg-rips/main/FPSBooster.lua"))()
+	end,
+})
+local Button = Tab:CreateButton({
+	Name = "Redeem All Codes",
+	Callback = function()
+		local ohString1 = "5000like"
+local ohString2 = "HappyHalloween"
+local ohString3 = "UPD1"
+local ohString4 = "10KLike"
+local ohString5 = "Thanks15"
+local ohString6 = "release"
+local ohString7 = "Coinsboosts"
+local ohString8 = "15Klike"
+local ohString9 = "UPD5"
+
+
+game:GetService("ReplicatedStorage").Game.Events.ReddemCode:InvokeServer(ohString1, ohString2, ohString3, ohString4, ohString5, ohString6, ohString7, ohString8, ohString9)
+	end,
+})
+
+
+local Section = Tab:CreateSection("Auto Click - V")
+local Section = Tab:CreateSection("Mouse Lock - B")
+local Button = Tab:CreateButton({
+	Name = "In-game Autoclicker (1 sec delay)",
+	Callback = function()
+		getgenv().Settings = {
+    ["Auto Click Keybind"] = "V",
+    ["Lock Mouse Position Keybind"] = "B",
+    ["Right Click"] = false,
+    ["GUI"] = true,
+    ["Delay"] = 1 
+}
+loadstring(game:HttpGet("https://raw.githubusercontent.com/BimbusCoder/Script/main/Auto%20Clicker.lua"))()
+	end,
+})
+local Button = Tab:CreateButton({
+	Name = "Infinite Yield Admin",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source", true))()
+	end,
+})
+local Tab = Window:CreateTab("Teleports") 
+local Button = Tab:CreateButton({
+	Name = "VIP Area",
+	Callback = function()
+	local ohString1 = "W1_Vip"
+
+game:GetService("ReplicatedStorage").Game.Events.Teleport:InvokeServer(ohString1)
+	end,
+})
+local Button = Tab:CreateButton({
+	Name = "W1_Z1",
+	Callback = function()
+		local ohString1 = "W1_Z1"
+
+game:GetService("ReplicatedStorage").Game.Events.Teleport:InvokeServer(ohString1)
+	end,
+})
+local Button = Tab:CreateButton({
+	Name = "W1_Z2",
+	Callback = function()
+		local ohString1 = "W1_Z2"
+
+game:GetService("ReplicatedStorage").Game.Events.Teleport:InvokeServer(ohString1)
+	end,
+})
+local Button = Tab:CreateButton({
+	Name = "W1_Z3",
+	Callback = function()
+		local ohString1 = "W1_Z3"
+
+game:GetService("ReplicatedStorage").Game.Events.Teleport:InvokeServer(ohString1)
+	end,
+})
+local Button = Tab:CreateButton({
+	Name = "W2_Z1",
+	Callback = function()
+		local ohString1 = "W2_Z1"
+
+game:GetService("ReplicatedStorage").Game.Events.Teleport:InvokeServer(ohString1)
+	end,
+})
+local Button = Tab:CreateButton({
+	Name = "W2_Z2",
+	Callback = function()
+		local ohString1 = "W2_Z2"
+
+game:GetService("ReplicatedStorage").Game.Events.Teleport:InvokeServer(ohString1)
+	end,
+})
+local Button = Tab:CreateButton({
+	Name = "W2_Z3",
+	Callback = function()
+		local ohString1 = "W2_Z3"
+
+game:GetService("ReplicatedStorage").Game.Events.Teleport:InvokeServer(ohString1)
+	end,
+})
+local Button = Tab:CreateButton({
+	Name = "W3_Z1",
+	Callback = function()
+		local ohString1 = "W3_Z1"
+
+game:GetService("ReplicatedStorage").Game.Events.Teleport:InvokeServer(ohString1)
+	end,
+})
+local Button = Tab:CreateButton({
+	Name = "W3_Z2",
+	Callback = function()
+		local ohString1 = "W3_Z2"
+
+game:GetService("ReplicatedStorage").Game.Events.Teleport:InvokeServer(ohString1)
+	end,
+})
+local Button = Tab:CreateButton({
+	Name = "W3_Z3",
+	Callback = function()
+		local ohString1 = "W3_Z3"
+
+game:GetService("ReplicatedStorage").Game.Events.Teleport:InvokeServer(ohString1)
+	end,
+})
+--------------------------
+local Tab = Window:CreateTab("Credits")
+local Paragraph = Tab:CreateParagraph({Title = "Made by", Content = "Tester 🕺🕺💃💃"})
+Rayfield:LoadConfiguration()
