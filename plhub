@@ -19,7 +19,7 @@ Rayfield:Notify({
         Ignore = {
             Name = "Shut up.",
             Callback = function()
-                print("The user tapped Okay!")
+                print("👁️👄👁️")
             end
 		},
 	},
@@ -48,6 +48,7 @@ local Button = Tab:CreateButton({
 game:GetService("ReplicatedStorage").Game.Events.ReddemVIPReward:InvokeServer()
 game:GetService("ReplicatedStorage").Game.Events.ReddemRankReward:InvokeServer()
 game:GetService("ReplicatedStorage").Game.Events.SpinWheel:InvokeServer()
+    print("Checking for Rewards and Wheel....")
 end
 	end,
 })
