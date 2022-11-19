@@ -66,7 +66,7 @@ game:GetService("Players").LocalPlayer.PlayerScripts.UiTrigger:Fire(ohString1)
 	end,
 })
 local Button = Tab:CreateButton({
-	Name = "Index UI",
+	Name = "Index Station",
 	Callback = function()
 		local ohString1 = "Index"
 
@@ -74,7 +74,7 @@ game:GetService("Players").LocalPlayer.PlayerScripts.UiTrigger:Fire(ohString1)
 	end,
 })
 local Button = Tab:CreateButton({
-	Name = "Upgrade UI",
+	Name = "Upgrade Station",
 	Callback = function()
 		local ohString1 = "Upgrade"
 
@@ -82,14 +82,13 @@ game:GetService("Players").LocalPlayer.PlayerScripts.UiTrigger:Fire(ohString1)
 	end,
 })
 local Button = Tab:CreateButton({
-	Name = "Converter UI",
+	Name = "Converter Station",
 	Callback = function()
 		local ohString1 = "Converter"
 
 game:GetService("Players").LocalPlayer.PlayerScripts.UiTrigger:Fire(ohString1)
 	end,
 })
-
 local Section = Tab:CreateSection("Toggle Shiny and Rainbow UI here for easier converting")
 local Button = Tab:CreateButton({
 	Name = "Auto Shiny Gui (TURN ON)",
@@ -192,8 +191,7 @@ game:GetService("ReplicatedStorage").Game.Events.ReddemCode:InvokeServer(ohStrin
 })
 
 
-local Section = Tab:CreateSection("Auto Click - V")
-local Section = Tab:CreateSection("Mouse Lock - B")
+local Label = Tab:CreateLabel("V=Autoclick / B=Mouselock")
 local Button = Tab:CreateButton({
 	Name = "In-game Autoclicker (1 sec delay)",
 	Callback = function()
@@ -211,6 +209,12 @@ local Button = Tab:CreateButton({
 	Name = "Infinite Yield Admin",
 	Callback = function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source", true))()
+	end,
+})
+local Button = Tab:CreateButton({
+	Name = "Rejoin Server",
+	Callback = function()
+		game:GetService'TeleportService':TeleportToPlaceInstance(game.PlaceId,game.JobId,game:GetService'Players'.LocalPlayer)
 	end,
 })
 local Tab = Window:CreateTab("Teleports") 
@@ -290,6 +294,22 @@ local Button = Tab:CreateButton({
 	Name = "W3_Z3",
 	Callback = function()
 		local ohString1 = "W3_Z3"
+
+game:GetService("ReplicatedStorage").Game.Events.Teleport:InvokeServer(ohString1)
+	end,
+})
+local Button = Tab:CreateButton({
+	Name = "W4_Z1",
+	Callback = function()
+		local ohString1 = "W4_Z1"
+
+game:GetService("ReplicatedStorage").Game.Events.Teleport:InvokeServer(ohString1)
+	end,
+})
+local Button = Tab:CreateButton({
+	Name = "W4_Z2",
+	Callback = function()
+		local ohString1 = "W4_Z2"
 
 game:GetService("ReplicatedStorage").Game.Events.Teleport:InvokeServer(ohString1)
 	end,
