@@ -217,6 +217,24 @@ local Button = Tab:CreateButton({
 		game:GetService'TeleportService':TeleportToPlaceInstance(game.PlaceId,game.JobId,game:GetService'Players'.LocalPlayer)
 	end,
 })
+local Button = Tab:CreateButton({
+	Name = "Anti AFK",
+	Callback = function()
+			while wait(1) do
+		Players.LocalPlayer.Idled:Connect(function()
+			local VirtualUser = game:GetService("VirtualUser")
+			VirtualUser:CaptureController()
+			VirtualUser:ClickButton2(Vector2.new())
+		end)
+		end
+	end,
+})
+local Button = Tab:CreateButton({
+	Name = "Remove Firework Efx",
+	Callback = function()
+		game:GetService("ReplicatedStorage").Assets.Firework.Firework:Destroy()
+	end,
+})
 local Tab = Window:CreateTab("Teleports") 
 local Button = Tab:CreateButton({
 	Name = "VIP Area",
