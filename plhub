@@ -1,9 +1,9 @@
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
 
 local Window = Rayfield:CreateWindow({
-	Name = "PL2 Basic Tools V1",
-	LoadingTitle = "Made with Love, for Rami",
-	LoadingSubtitle = "More to come",
+	Name = "PL2 Basic Tools",
+	LoadingTitle = "Loading Pet Legends 2 Tools",
+	LoadingSubtitle = "More to come...",
 	ConfigurationSaving = {
 		Enabled = false,
 		FolderName = "nil",
@@ -11,8 +11,8 @@ local Window = Rayfield:CreateWindow({
 	},
 })
 Rayfield:Notify({
-    Title = "Made to give an easier experience",
-    Content = "You're safe here, hacker 😇🕺",
+    Title = "UI Successfuly Loaded",
+    Content = "START HACKING 😇🕺",
     Duration = 6.5,
     Image = 4483362458,
     Actions = { -- Notification Buttons
