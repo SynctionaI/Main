@@ -52,7 +52,12 @@ game:GetService("ReplicatedStorage").Game.Events.SpinWheel:InvokeServer()
 end
 	end,
 })
-
+local Button = Tab:CreateButton({
+   Name = "Redeem XMas Rewards (Once per day, limited use amounts)",
+   Callback = function()
+   game:GetService("ReplicatedStorage").Game.Events.ReddemXmasReward:InvokeServer()
+   end,
+})
 
 local Tab = Window:CreateTab("GUI Utility") 
 local Section = Tab:CreateSection("Open GUI Tabs")
